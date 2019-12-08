@@ -33,6 +33,26 @@
     input{
       width:65px;
     }
+    .overlay{
+      background: rgba(0, 0, 0, .3);
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      visibility: hidden;
+    }
+    .popup{
+      background: #ffffff;
+      box-shadow: 0px 0px 5px 0px rgba(0,0,0,.3);
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      width: 800px;
+    }
   </style>
   <body>
     <div class="mb-5 d-flex flex-wrap text-center align-middle titulo">
@@ -84,7 +104,7 @@
         <div class="form-group row">
           <label class="col-sm-2 col-form-label">Cantidad</label>
           <div class="col-sm-10">
-            <input type="number" class="form-control" id="cantidadVaina" value="1">
+            <input type="number" min="1" class="form-control" id="cantidadVaina" value="1">
           </div>
         </div>
         <div class="form-group row">
@@ -119,7 +139,7 @@
         <div class="form-group row">
           <label class="col-sm-2 col-form-label">Cantidad</label>
           <div class="col-sm-10">
-            <input type="number" class="form-control" id="cantidadDroide" value="1">
+            <input type="number" min="1" class="form-control" id="cantidadDroide" value="1">
           </div>
         </div>
         <div class="form-group row">
@@ -131,10 +151,58 @@
       </form>
     </div>
     <div class="d-flex">
-      <button type="button" class="btn btn-warning">Añadir</button>
-      <button type="button" class="btn btn-warning">Comprar <img class="credito" src="img\credito.png" alt="credito"></button>
+      <button type="button" id="comprar" class="btn btn-warning">Comprar <img class="credito" src="img\credito.png" alt="credito"></button>
+    </div>
+    <!-- ventana emergente que muestra la compra-->
+    <div class="overlay">
+      <div class="popup">
+         <h1>Tu Compra</h1>
+         <h3>Vaina:</h3>
+         <div class="form-group row">
+           <label class="col-sm-2 col-form-label">Nombre Vaina</label>
+           <input type="text" id="VNombreVaina" readonly class="form-control col-sm-10">
+         </div>
+         <div class="form-group row">
+           <label class="col-sm-2 col-form-label">Motor</label>  <input type="text" id="VMotorVaina" readonly class="form-control col-sm-10">
+         </div>
+         <div class="form-group row">
+           <label class="col-sm-2 col-form-label">Velocidad</label>  <input type="text" id="VVelocidadVaina" readonly class="form-control col-sm-10">
+         </div>
+         <div class="form-group row">
+           <label class="col-sm-2 col-form-label">Dimension</label>  <input type="text" id="VDimensionVaina" readonly class="form-control col-sm-10">
+         </div>
+         <div class="form-group row">
+           <label class="col-sm-2 col-form-label">Cantidad</label>  <input type="text" id="VCantidadVaina" readonly class="form-control col-sm-10">
+         </div>
+         <div class="form-group row">
+           <label class="col-sm-2 col-form-label">Precio</label>  <input type="text" id="VPrecioVaina" readonly class="form-control col-sm-10">
+         </div>
+         <hr>
+         <h3>Droide:</h3>
+         <div class="form-group row">
+           <label class="col-sm-2 col-form-label">Modelo</label>  <input type="text" id="VModeloDroide" readonly class="form-control col-sm-10">
+         </div>
+         <div class="form-group row">
+           <label class="col-sm-2 col-form-label">Equipamiento</label>  <input type="text" id="VEquipamientoDroide" readonly class="form-control col-sm-10">
+         </div>
+         <div class="form-group row">
+           <label class="col-sm-2 col-form-label">Color</label>  <input type="text" id="VColorDroide" readonly class="form-control col-sm-10">
+         </div>
+         <div class="form-group row">
+           <label class="col-sm-2 col-form-label">Cantidad</label>  <input type="text" id="VCantidadDroide" readonly class="form-control col-sm-10">
+         </div>
+         <div class="form-group row">
+           <label class="col-sm-2 col-form-label">Precio</label>  <input type="text" id="VPrecioDroide" readonly class="form-control col-sm-10">
+         </div>
+         <hr>
+         <div class="d-flex">
+           <input type="text" id="VPrecioTotal" readonly class="form-control"><img class="credito" src="img\credito.png" alt="credito">
+         </div>
+        <a href="#" id="cerrar" class="cerrar">Cerrar</a>
+      </div>
     </div>
     <script src="js\objetos.js" ></script>
     <script type="module" src="js/clases.js" ></script>
+    <script src="js\comprar.js" ></script>
   </body>
 </html>

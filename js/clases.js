@@ -1,7 +1,7 @@
 import { Droide } from './droide.js';
 
 $(document).ready(function(){
-
+//Clase R2D2
   class R2D2 extends Droide {
     constructor() {
       super(107,45);
@@ -16,6 +16,7 @@ $(document).ready(function(){
       return "7000";
     };
   };
+  //Clase C3P0
   class C3P0 extends Droide {
     constructor() {
       super(171,75);
@@ -30,6 +31,7 @@ $(document).ready(function(){
       return "5000";
     };
   }
+  //cuando seleccionen un tipo cargará la info de dicho droide
   $('#droideTipo').change(function(){
       var value = $(this).val();
       console.log(value);
@@ -53,7 +55,7 @@ $(document).ready(function(){
         $('#cantidadDroide').val('1');
       }
   });
-
+  //funcion para calcular el precio teniendo en cuenta la cantidad introducida por el usuario
   function calCantidad(obj){
     $('#cantidadDroide').val('1')
     $('#cantidadDroide').change(function(){
@@ -63,7 +65,7 @@ $(document).ready(function(){
       $('#precioDroide').val(total);
     });
   }
-
+  //funcion para imprimir el formulario
   function imprimir(droide){
     $('#equipamiento').val(droide.Equipamiento());
     $('#color').val(droide.Color());
