@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="img\tatooine.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <title>Chatarrería Watto</title>
+  </head>
+  <style>
+    *{
+      padding:0px;
+      margin:0px;
+    }
+    button{
+      margin: 3%;
+      width: 95%;
+    }
+    .watto{
+      heith: 100px;
+      width: 100px;
+    }
+    .credito{
+      heith: 25px;
+      width: 25px;
+    }
+    body{
+      text-align: center;
+    }
+    .titulo{
+      padding-left: 30%;
+    }
+    input{
+      width:65px;
+    }
+  </style>
+  <body>
+    <div class="mb-5 d-flex flex-wrap text-center align-middle titulo">
+      <div class="mr-3">
+        <img src="img\watto.png" class="watto" alt="watto">
+      </div>
+      <div class="">
+        <h1>Bienvenidos a la Chatarrería Watto</h1>
+        <h3>No hay regateos que valgan salvo los mios!</h3>
+        <h6>No funcionan los trucos mentales Jedi conmigo!</h6>
+      </div>
+    </div>
+    <div class="m-5">
+      <form>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Elige tipo de Vaina</label>
+          <div class="col-sm-10">
+            <select id="vainaTipo" class="form-control">
+              <option selected> </option>
+              <option value="1">Vaina 01</option>
+              <option value="2">Vaina 02</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Nombre</label>
+          <div class="col-sm-10">
+            <input type="text" readonly class="form-control" id="nombreVaina">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Velocidad</label>
+          <div class="col-sm-10">
+            <input type="text" readonly class="form-control" id="velocidadVaina">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Motores</label>
+          <div class="col-sm-10">
+            <input type="text" readonly class="form-control" id="motorVaina">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Dimensión(metros)</label>
+          <div class="col-sm-10">
+            <input type="text" readonly class="form-control" id="dimensionVaina">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Cantidad</label>
+          <div class="col-sm-10">
+            <input type="number" class="form-control" id="cantidadVaina" value="1">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Precio</label>
+          <div class="col-sm-10">
+            <input type="text" readonly class="form-control" id="precioVaina">
+          </div>
+        </div>
+        <hr>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Modelo Del Droide</label>
+          <div class="col-sm-10">
+            <select id="droideTipo" class="form-control">
+              <option selected> </option>
+              <option value="3">C3P0</option>
+              <option value="4">R2D2</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Equipamiento</label>
+          <div class="col-sm-10">
+            <input type="text" readonly class="form-control" id="equipamiento">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Color</label>
+          <div class="col-sm-10">
+            <input type="text" readonly class="form-control" id="color">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Cantidad</label>
+          <div class="col-sm-10">
+            <input type="number" class="form-control" id="cantidadDroide" value="1">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Precio</label>
+          <div class="col-sm-10">
+            <input type="text" readonly class="form-control" id="precioDroide">
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="d-flex">
+      <button type="button" class="btn btn-warning">Añadir</button>
+      <button type="button" class="btn btn-warning">Comprar <img class="credito" src="img\credito.png" alt="credito"></button>
+    </div>
+    <script src="js\objetos.js" ></script>
+    <script src="js/clases.js" ></script>
+  </body>
+</html>
