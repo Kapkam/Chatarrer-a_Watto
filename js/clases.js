@@ -1,19 +1,7 @@
+import { Droide } from './droide.js';
+
 $(document).ready(function(){
- class Droide {
-    constructor(altura, peso) {
-      this.altura = altura;
-      this.peso = peso;
-    };
-    GetAltura(){
-      return this.altura;
-    };
-    GetPeso(){
-      return this.peso;
-    };
-    Equipamineto(){};
-    Color(){};
-    Precio(){};
-  };
+
   class R2D2 extends Droide {
     constructor() {
       super(107,45);
